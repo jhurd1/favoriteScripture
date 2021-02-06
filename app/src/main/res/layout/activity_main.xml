@@ -23,7 +23,6 @@
         android:layout_height="50dp"
         android:layout_below="@+id/buttonDisplay"
         android:layout_alignStart="@+id/buttonDisplay"
-        android:layoutalignEnd="@+id/buttonDisplay"
         android:layout_alignLeft="@+id/buttonDisplay"
         android:text="Load Scripture"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,6 +49,6 @@
         android:hint="Book"
         android:layout_below="@+id/textView"
         android:layout_alignStart="@+id/textView"
-        android:layoutalignEnd="@+id/textView"
+
         android:layout_alignLeft="@+id/textView" />
 </RelativeLayout>

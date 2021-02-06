@@ -2,13 +2,16 @@ package com.example.favoritescripture;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    // These represent containers (variables) for saving data to
     public static final String BOOK_PART = "BOOK_PART";
+    public static final String APP_PREFS = "APPLICATION_PREFERENCES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,5 +27,4 @@ public class MainActivity extends AppCompatActivity {
         scriptureIntent.putExtra(BOOK_PART, book);
         startActivity(scriptureIntent);
     }
-    
 }
