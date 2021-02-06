@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginBottom="100dp"
+        android:text="Display Scripture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/buttonDisplay"
+        android:layout_alignStart="@+id/buttonDisplay"
+        android:layoutalignEnd="@+id/buttonDisplay"
+        android:layout_alignLeft="@+id/buttonDisplay"
+        android:text="Load Scripture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
+        android:layout_marginBottom="176dp"
+        android:text="@string/enter_your_favorite_scripture"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDisplay"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="19dp"
+        android:id="@+id/txtBook"
+        android:hint="Book"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layoutalignEnd="@+id/textView"
+        android:layout_alignLeft="@+id/textView" />
+</RelativeLayout>
