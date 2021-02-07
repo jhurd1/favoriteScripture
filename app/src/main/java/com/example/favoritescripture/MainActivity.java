@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle("Favorite Scripture");
     }
 
-    public void onDisplayScripture(View theButton)
+    public void onDisplayScripture(View buttonDisplay)
     {
         EditText txtBook = (EditText) findViewById(R.id.txtBook);
         String book = txtBook.getText().toString();
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(scriptureIntent);
     }
 
-    public void onLoadScripture(View theButton)
+    public void onLoadScripture(View buttonDisplay)
     {
         SharedPreferences sharedPref = getSharedPreferences(APP_PREFS, Context.MODE_PRIVATE);
 
@@ -52,5 +52,6 @@ public class MainActivity extends AppCompatActivity {
         String book = sharedPref.getString(BOOK_PART, null);
 
         EditText txtBook = (EditText) findViewById(R.id.txtBook);
+        txtBook.setText(book); // new line
     }
 }

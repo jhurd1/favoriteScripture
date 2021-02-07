@@ -50,6 +50,7 @@
         android:layout_alignStart="@+id/buttonDisplay"
         android:layout_alignLeft="@+id/buttonDisplay"
         android:text="Load Scripture"
+        android:onClick="onDisplayScripture"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

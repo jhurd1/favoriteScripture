@@ -14,7 +14,7 @@ import android.util.Log;
 
 public class DisplayActivity extends AppCompatActivity {
 
-    String _book;
+    private String _book; // making this private made it run slower
     private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -28,7 +28,7 @@ public class DisplayActivity extends AppCompatActivity {
         scriptureLabel.setText(_book);
     }
 
-    public void onSaveScripture(View theButton)
+    public void onSaveScripture(View /*saveScripture*/theButton)
     {
         /*SharedPreferences can store and retrieve data to and from a file.*/
         SharedPreferences sharedPrefs = getSharedPreferences(MainActivity.APP_PREFS, Context.MODE_PRIVATE);
@@ -36,27 +36,11 @@ public class DisplayActivity extends AppCompatActivity {
         /*SharedPreferences editor modifies values in the SP object.*/
         SharedPreferences.Editor editor = sharedPrefs.edit();
 
-        /*putString of Editor object of SP object;
-        * sets a string value in the preferences editor;
-        * gets "written back" when commit() or apply() are
-        * called.*/
         editor.putString(MainActivity.BOOK_PART, _book);
 
-        /*As aforementioned, putString writes when apply
-        * is called. Apply() commits changes from the
-        * Editor object to the SP object.*/
         editor.apply();
 
-        /*A toast constitutes a short message for the user.
-        * makeText(), when possessing three arguments,
-        * produces a text message. LENGTH_SHORT
-        * comprises a predetermined, shorter length of time
-        * to display the message.*/
         Toast.makeText(this, "Scripture saved.", Toast.LENGTH_SHORT).show();
 
-
-        /*Intent can be used to start an activity, send data to components, or communicate
-        * with a service.
-        Intent scriptureIntent = new Intent(this, DisplayActivity.class);*/
     }
 }
