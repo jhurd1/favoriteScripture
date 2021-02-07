@@ -52,6 +52,6 @@ public class MainActivity extends AppCompatActivity {
         String book = sharedPref.getString(BOOK_PART, null);
 
         EditText txtBook = (EditText) findViewById(R.id.txtBook);
-        txtBook.setText(book); // new line
+        //txtBook.setText(book); // new line
     }
 }

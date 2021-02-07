@@ -28,7 +28,7 @@ public class DisplayActivity extends AppCompatActivity {
         scriptureLabel.setText(_book);
     }
 
-    public void onSaveScripture(View /*saveScripture*/theButton)
+    public void onSaveScripture(View saveScripture)
     {
         /*SharedPreferences can store and retrieve data to and from a file.*/
         SharedPreferences sharedPrefs = getSharedPreferences(MainActivity.APP_PREFS, Context.MODE_PRIVATE);
