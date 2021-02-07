@@ -10,10 +10,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
 public class DisplayActivity extends AppCompatActivity {
 
     String _book;
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,8 @@ public class DisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display);
         Intent intent = getIntent();
         _book = intent.getStringExtra(MainActivity.BOOK_PART);
-        TextView scriptureLabel = (TextView) findViewById(R.id.textView);
+        Log.d(TAG, "Received intent.");
+        TextView scriptureLabel = (TextView) findViewById(R.id.lblScripture);
         scriptureLabel.setText(_book);
     }
 
@@ -47,7 +50,8 @@ public class DisplayActivity extends AppCompatActivity {
         /*A toast constitutes a short message for the user.
         * makeText(), when possessing three arguments,
         * produces a text message. LENGTH_SHORT
-        * comprises a predetermined, shorter length of time.*/
+        * comprises a predetermined, shorter length of time
+        * to display the message.*/
         Toast.makeText(this, "Scripture saved.", Toast.LENGTH_SHORT).show();
 
 

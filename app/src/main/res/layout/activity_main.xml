@@ -6,37 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="21dp"
-        android:layout_marginBottom="100dp"
-        android:text="Display Scripture"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonLoad"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_below="@+id/buttonDisplay"
-        android:layout_alignStart="@+id/buttonDisplay"
-        android:layout_alignLeft="@+id/buttonDisplay"
-        android:text="Load Scripture"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+    /*Physically moving the code block does not
+    alter the location of the objects on screen. Tested it.*/
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
         android:layout_marginLeft="116dp"
-        android:layout_marginBottom="176dp"
+        android:layout_marginBottom="200dp"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
         android:text="@string/enter_your_favorite_scripture"
         app:layout_constraintBottom_toTopOf="@+id/buttonDisplay"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    /*To get the button off of the text heading,
+    I used marginTop*/
+    <Button
+        android:id="@+id/buttonDisplay"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginBottom="30dp"
+        android:text="Display Scripture"
+        android:onClick="onDisplayScripture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    /*use layoutBelow for subsequent objects,
+    such as subsequent buttons*/
+    <Button
+        android:id="@+id/buttonLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonDisplay"
+        android:layout_alignStart="@+id/buttonDisplay"
+        android:layout_alignLeft="@+id/buttonDisplay"
+        android:text="Load Scripture"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -49,6 +63,5 @@
         android:hint="Book"
         android:layout_below="@+id/textView"
         android:layout_alignStart="@+id/textView"
-
         android:layout_alignLeft="@+id/textView" />
 </RelativeLayout>
